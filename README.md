@@ -3,6 +3,8 @@ Run automation test
 
 
 # Introduction to API Testing and Postman
+![image](https://github.com/user-attachments/assets/d635632b-bd53-4338-abbc-4a2e6c72c90a)
+
 
 API (Application Programming Interface) allows different software systems to communicate. APIs expose certain functionalities or data from a system and enable others to use it, making it possible to interact with a web service without knowing how it’s built internally.
 
