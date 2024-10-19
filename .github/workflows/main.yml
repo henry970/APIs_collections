@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Updated to the latest version
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Updated to the latest version
         with:
           node-version: '16'  # Specify the Node.js version
 
@@ -26,7 +26,8 @@ jobs:
         run: newman run Demo_test.postman_collection.json -r htmlextra --reporter-htmlextra-export ./reports/report.html
 
       - name: Upload HTML Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3  # Updated to the latest version
         with:
           name: newman-report
           path: ./reports/report.html
+
