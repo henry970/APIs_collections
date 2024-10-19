@@ -1,0 +1,32 @@
+name: Run Postman API Collection
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your main branch name
+  workflow_dispatch:  # Allows manual trigger of the workflow
+
+jobs:
+  run-newman:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Specify the Node.js version
+
+      - name: Install Newman
+        run: npm install -g newman newman-reporter-html
+
+      - name: Run Postman Collection
+        run: newman run Demo_test.postman_collection.json -r htmlextra --reporter-htmlextra-export ./reports/report.html
+
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: newman-report
+          path: ./reports/report.html
