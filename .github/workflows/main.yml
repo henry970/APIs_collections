@@ -19,8 +19,10 @@ jobs:
         with:
           node-version: '16'  # Specify the Node.js version
 
-      - name: Install Newman
-        run: npm install -g newman newman-reporter-html
+      - name: Install Newman and HTMLExtra Reporter
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra  # Ensure htmlextra reporter is installed
 
       - name: Run Postman Collection
         run: newman run Demo_test.postman_collection.json -r htmlextra --reporter-htmlextra-export ./reports/report.html
@@ -30,4 +32,5 @@ jobs:
         with:
           name: newman-report
           path: ./reports/report.html
+
 
