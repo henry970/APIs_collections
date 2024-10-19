@@ -5,6 +5,8 @@ on:
     branches:
       - main  # Adjust to your main branch name
   workflow_dispatch:  # Allows manual trigger of the workflow
+  schedule:  # Schedule the workflow
+    - cron: '0 8,20 * * *'  # Runs at 08:00 and 20:00 UTC daily
 
 jobs:
   run-newman:
@@ -32,6 +34,7 @@ jobs:
         with:
           name: newman-report
           path: ./reports/report.html
+
 
 
 
