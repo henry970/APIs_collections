@@ -65,7 +65,8 @@ Use this API endpoint: https://reqres.in/api/login.
 In the Body tab, select raw and choose JSON as the data format.
 Enter the following JSON data in the body:
 JSON
-Copy code
+
+
 {
     "email": "eve.holt@reqres.in",
     "password": "Pistol@12"
