@@ -40,6 +40,8 @@ Optional: Generate Reports: You can generate different types of reports, such as
 **Command:**
 newman run Dome_test.postman_collection.json -r htmlextra --reporter-htmlextra-export ./report.ht
 
+# Sample Report
+
 ![WhatsApp Image 2024-10-19 at 15 46 54_d69848ef](https://github.com/user-attachments/assets/db8a95c5-f335-4faf-a38e-8e6dbb39a83d)
 
 
