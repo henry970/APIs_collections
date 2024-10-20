@@ -41,7 +41,7 @@ Open Postman and create a new request by clicking New > HTTP Request.
 Choose the method (GET, POST, etc.) and enter the API endpoint URL.
 Adding Parameters:
 
-Some API requests require query parameters, e.g., https://api.example.com/users?limit=10. You can add these in the Params tab.
+Some API requests require query parameters, e.g., https://reqres.in/api/users?page=2. You can add these in the Params tab.
 Other APIs may require parameters in the body, such as JSON data. You can add this in the Body tab.
 Setting Headers:
 
@@ -54,23 +54,22 @@ Let’s perform a basic GET request to retrieve a list of users.
 
 Open Postman.
 Choose GET as the method.
-Enter this API endpoint: https://jsonplaceholder.typicode.com/users.
+Enter this API endpoint: https://reqres.in/api/users?page=2.
 Click Send.
 View the response in the lower panel. You should see a list of users returned in JSON format with a 200 OK status.
 Example: POST Request
 Now, let’s try creating a new resource with a POST request.
 
 Change the method to POST.
-Use this API endpoint: https://jsonplaceholder.typicode.com/posts.
+Use this API endpoint: https://reqres.in/api/login.
 In the Body tab, select raw and choose JSON as the data format.
 Enter the following JSON data in the body:
-json
+JSON
 Copy code
-~{
-    "title": "My First Post",
-    "body": "This is the content of my post.",
-    "userId": 1
-}~
+{
+    "email": "eve.holt@reqres.in",
+    "password": "Pistol@12"
+}
 Click Send.
 You should get a 201 Created status code, meaning the post was successfully created.
 Postman Collections
@@ -80,12 +79,13 @@ To create a collection, click New > Collection.
 Add requests to the collection by selecting the collection name when saving a request.
 You can also use collections to:
 Run requests in sequence (great for automated API testing).
+
 Share them with teammates.
 Postman Environment Variables
 Variables in Postman allow you to reuse values (e.g., URLs, tokens) across multiple requests.
 
 Go to Environment settings and create an environment (e.g., Development, Production).
-Define variables like base_url = https://api.example.com or auth_token = <token>.
+Define variables like base_url = (https://reqres.in) or auth_token = <token>.
 Use the variables in requests like this: {{base_url}}/users.
 This makes switching between environments easy, as you only need to update the environment variables.
 
@@ -152,3 +152,4 @@ Repeat the steps to add additional requests (e.g., POST, PUT, DELETE) to the sam
 Step 6: Organize and Run the Collection
 You can organize requests into folders within a collection to group related requests.
 You can run the entire collection using the Collection Runner by clicking on the collection, then selecting the Run button.
+
