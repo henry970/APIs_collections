@@ -43,7 +43,7 @@ newman run Dome_test.postman_collection.json -r htmlextra --reporter-htmlextra-e
 ![WhatsApp Image 2024-10-19 at 15 46 54_d69848ef](https://github.com/user-attachments/assets/db8a95c5-f335-4faf-a38e-8e6dbb39a83d)
 
 
-Running Newman on GitHub (Using GitHub Actions)
+# Running Newman on GitHub (Using GitHub Actions)
 GitHub Actions is an excellent tool for running automated tests, including Postman collections via Newman, in your CI/CD pipeline.
 
 Step 1: Create GitHub Actions Workflow
